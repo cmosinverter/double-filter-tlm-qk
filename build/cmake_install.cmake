@@ -1,4 +1,4 @@
-# Install script for directory: /home/user/ee6470/hw2/filter_tlm_p2p
+# Install script for directory: /home/user/ee6470/hw2/filter_tlm_p2p_qk
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/user/ee6470/hw2/filter_tlm_p2p/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/user/ee6470/hw2/filter_tlm_p2p_qk/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

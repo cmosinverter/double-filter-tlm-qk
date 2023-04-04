@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/ee6470/hw2/filter_tlm_p2p
+CMAKE_SOURCE_DIR = /home/user/ee6470/hw2/filter_tlm_p2p_qk
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/ee6470/hw2/filter_tlm_p2p/build
+CMAKE_BINARY_DIR = /home/user/ee6470/hw2/filter_tlm_p2p_qk/build
 
 # Utility rule file for run.
 
@@ -69,8 +69,8 @@ include CMakeFiles/run.dir/progress.make
 CMakeFiles/run: out.bmp
 
 out.bmp: double
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/ee6470/hw2/filter_tlm_p2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating out.bmp"
-	./double /home/user/ee6470/hw2/filter_tlm_p2p/lena_std_short.bmp ./out.bmp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/ee6470/hw2/filter_tlm_p2p_qk/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating out.bmp"
+	./double /home/user/ee6470/hw2/filter_tlm_p2p_qk/lena_std_short.bmp ./out.bmp
 
 run: CMakeFiles/run
 run: out.bmp
@@ -86,6 +86,6 @@ CMakeFiles/run.dir/clean:
 .PHONY : CMakeFiles/run.dir/clean
 
 CMakeFiles/run.dir/depend:
-	cd /home/user/ee6470/hw2/filter_tlm_p2p/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/ee6470/hw2/filter_tlm_p2p /home/user/ee6470/hw2/filter_tlm_p2p /home/user/ee6470/hw2/filter_tlm_p2p/build /home/user/ee6470/hw2/filter_tlm_p2p/build /home/user/ee6470/hw2/filter_tlm_p2p/build/CMakeFiles/run.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/user/ee6470/hw2/filter_tlm_p2p_qk/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/ee6470/hw2/filter_tlm_p2p_qk /home/user/ee6470/hw2/filter_tlm_p2p_qk /home/user/ee6470/hw2/filter_tlm_p2p_qk/build /home/user/ee6470/hw2/filter_tlm_p2p_qk/build /home/user/ee6470/hw2/filter_tlm_p2p_qk/build/CMakeFiles/run.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/run.dir/depend
 

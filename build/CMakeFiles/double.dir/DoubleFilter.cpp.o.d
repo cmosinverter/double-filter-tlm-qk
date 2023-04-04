@@ -1,5 +1,5 @@
 CMakeFiles/double.dir/DoubleFilter.cpp.o: \
- /home/user/ee6470/hw2/filter_tlm_p2p/DoubleFilter.cpp \
+ /home/user/ee6470/hw2/filter_tlm_p2p_qk/DoubleFilter.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/cmath \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -171,7 +171,7 @@ CMakeFiles/double.dir/DoubleFilter.cpp.o: \
  /usr/include/c++/11/bits/ostream.tcc \
  /usr/include/c++/11/bits/istream.tcc \
  /usr/include/c++/11/bits/sstream.tcc \
- /home/user/ee6470/hw2/filter_tlm_p2p/DoubleFilter.h \
+ /home/user/ee6470/hw2/filter_tlm_p2p_qk/DoubleFilter.h \
  /opt/systemc/include/systemc \
  /opt/systemc/include/sysc/kernel/sc_cmnhdr.h /usr/include/c++/11/cassert \
  /usr/include/assert.h /usr/include/c++/11/vector \
@@ -360,4 +360,4 @@ CMakeFiles/double.dir/DoubleFilter.cpp.o: \
  /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h \
  /usr/include/c++/11/bits/erase_if.h \
- /home/user/ee6470/hw2/filter_tlm_p2p/filter_def.h
+ /home/user/ee6470/hw2/filter_tlm_p2p_qk/filter_def.h

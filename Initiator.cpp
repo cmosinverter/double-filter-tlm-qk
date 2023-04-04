@@ -1,6 +1,10 @@
 #include "Initiator.h"
 
-Initiator::Initiator(sc_module_name n) : sc_module(n), i_skt("i_skt") {}
+
+Initiator::Initiator(sc_module_name n) : sc_module(n), i_skt("i_skt") {
+  m_qk.set_global_quantum( sc_time(10, SC_NS) );
+  m_qk.reset();
+}
 
 int Initiator::read_from_socket(unsigned long int addr, unsigned char mask[],
                                 unsigned char rdata[], int dataLen) {
@@ -46,6 +50,7 @@ void Initiator::do_trans(tlm::tlm_generic_payload &trans) {
 
   i_skt->b_transport(trans, dummyDelay);
   //wait(sc_core::SC_ZERO_TIME);
-  wait(dummyDelay);
+  m_qk.inc(dummyDelay);
+  if (m_qk.need_sync()) m_qk.sync();
 
 } // do_trans()

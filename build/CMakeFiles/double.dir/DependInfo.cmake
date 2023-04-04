@@ -8,10 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/user/ee6470/hw2/filter_tlm_p2p/DoubleFilter.cpp" "CMakeFiles/double.dir/DoubleFilter.cpp.o" "gcc" "CMakeFiles/double.dir/DoubleFilter.cpp.o.d"
-  "/home/user/ee6470/hw2/filter_tlm_p2p/Initiator.cpp" "CMakeFiles/double.dir/Initiator.cpp.o" "gcc" "CMakeFiles/double.dir/Initiator.cpp.o.d"
-  "/home/user/ee6470/hw2/filter_tlm_p2p/Testbench.cpp" "CMakeFiles/double.dir/Testbench.cpp.o" "gcc" "CMakeFiles/double.dir/Testbench.cpp.o.d"
-  "/home/user/ee6470/hw2/filter_tlm_p2p/main.cpp" "CMakeFiles/double.dir/main.cpp.o" "gcc" "CMakeFiles/double.dir/main.cpp.o.d"
+  "/home/user/ee6470/hw2/filter_tlm_p2p_qk/DoubleFilter.cpp" "CMakeFiles/double.dir/DoubleFilter.cpp.o" "gcc" "CMakeFiles/double.dir/DoubleFilter.cpp.o.d"
+  "/home/user/ee6470/hw2/filter_tlm_p2p_qk/Initiator.cpp" "CMakeFiles/double.dir/Initiator.cpp.o" "gcc" "CMakeFiles/double.dir/Initiator.cpp.o.d"
+  "/home/user/ee6470/hw2/filter_tlm_p2p_qk/Testbench.cpp" "CMakeFiles/double.dir/Testbench.cpp.o" "gcc" "CMakeFiles/double.dir/Testbench.cpp.o.d"
+  "/home/user/ee6470/hw2/filter_tlm_p2p_qk/main.cpp" "CMakeFiles/double.dir/main.cpp.o" "gcc" "CMakeFiles/double.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links.
