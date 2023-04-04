@@ -164,7 +164,7 @@ void Testbench::do_filter() {
             mask[2] = 0xff;
             mask[3] = 0xff;
             initiator.write_to_socket(DOUBLE_FILTER_R_ADDR, mask, data.uc, 4);
-            wait(1 * CLOCK_PERIOD, SC_NS);
+            // wait(1 * CLOCK_PERIOD, SC_NS);
           }
         }
       } else {
@@ -191,7 +191,7 @@ void Testbench::do_filter() {
             mask[2] = 0xff;
             mask[3] = 0xff;
             initiator.write_to_socket(DOUBLE_FILTER_R_ADDR, mask, data.uc, 4);
-            wait(1 * CLOCK_PERIOD, SC_NS);
+            // wait(1 * CLOCK_PERIOD, SC_NS);
           }
         }
       }
@@ -202,7 +202,7 @@ void Testbench::do_filter() {
         output_num = data.sint;
         if(output_num>0) done=true;
       }
-      wait(10 * CLOCK_PERIOD, SC_NS);
+      // wait(10 * CLOCK_PERIOD, SC_NS);
       initiator.read_from_socket(DOUBLE_FILTER_RESULT_ADDR, mask, data.uc, 4);
       
       //debug

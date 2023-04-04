@@ -9,6 +9,7 @@ Initiator::Initiator(sc_module_name n) : sc_module(n), i_skt("i_skt") {
 int Initiator::read_from_socket(unsigned long int addr, unsigned char mask[],
                                 unsigned char rdata[], int dataLen) {
   // Set up the payload fields. Assume everything is 4 bytes.
+  delay = m_qk.get_local_time();
   trans.set_read();
   trans.set_address((sc_dt::uint64)addr);
   trans.set_data_ptr((unsigned char *)rdata);
@@ -27,6 +28,7 @@ int Initiator::read_from_socket(unsigned long int addr, unsigned char mask[],
 int Initiator::write_to_socket(unsigned long int addr, unsigned char mask[],
                                unsigned char wdata[], int dataLen) {
   // Set up the payload fields. Assume everything is 4 bytes.
+  delay = m_qk.get_local_time();
   trans.set_write();
   trans.set_address((sc_dt::uint64)addr);
   trans.set_data_ptr((unsigned char *)wdata);
@@ -43,14 +45,11 @@ int Initiator::write_to_socket(unsigned long int addr, unsigned char mask[],
 } // writeUpcall()
 
 void Initiator::do_trans(tlm::tlm_generic_payload &trans) {
-  sc_core::sc_time dummyDelay = sc_core::SC_ZERO_TIME;
-
   // Call the transport and wait for no time, which allows the thread to yield
   // and others to get a look in!
 
-  i_skt->b_transport(trans, dummyDelay);
-  //wait(sc_core::SC_ZERO_TIME);
-  m_qk.inc(dummyDelay);
+  i_skt->b_transport(trans, delay);
+  m_qk.inc( delay );
   if (m_qk.need_sync()) m_qk.sync();
 
 } // do_trans()

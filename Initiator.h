@@ -23,5 +23,6 @@ public:
   void do_trans(tlm::tlm_generic_payload &trans);
   tlm::tlm_generic_payload trans;
   tlm_utils::tlm_quantumkeeper m_qk;
+  sc_time delay = sc_time(10, SC_NS);
 };
 #endif

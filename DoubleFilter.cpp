@@ -136,6 +136,7 @@ void DoubleFilter::blocking_transport(tlm::tlm_generic_payload &payload,
     data_ptr[1] = buffer.uc[1];
     data_ptr[2] = buffer.uc[2];
     data_ptr[3] = buffer.uc[3];
+    delay = sc_time(5, SC_NS);
     break;
 
   case tlm::TLM_WRITE_COMMAND:
@@ -160,6 +161,7 @@ void DoubleFilter::blocking_transport(tlm::tlm_generic_payload &payload,
                 << std::dec << " is not valid" << std::endl;
       break;
     }
+    delay = sc_time(10, SC_NS);
     break;
 
   case tlm::TLM_IGNORE_COMMAND:
