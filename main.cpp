@@ -21,13 +21,26 @@ int sc_main(int argc, char **argv) {
          << endl;
     return 0;
   }
+
+  // capture the start time of the simulation
+  gettimeofday(&start_time, NULL);
+
   Testbench tb("tb");
   DoubleFilter double_filter("doubel_filter");
   tb.initiator.i_skt(double_filter.t_skt);
 
   tb.read_bmp(argv[1]);
   sc_start();
+
+  // capture the end time of the simulation
+  gettimeofday(&end_time, NULL);
+
+  // calculate the actual simulation run time in seconds
+  double run_time = (end_time.tv_sec - start_time.tv_sec) +
+                    (end_time.tv_usec - start_time.tv_usec) / 1000000.0;
+
   std::cout << "Simulated time == " << sc_core::sc_time_stamp() << std::endl;
+  std::cout << "Actual simulation run time == " << run_time << " seconds" << std::endl;
   tb.write_bmp(argv[2]);
 
   return 0;
